@@ -1,26 +1,31 @@
-
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 html {
     font-size: 62.5%;
-   
+    
 }
 
 body {
-    background-color:rgb(87, 89, 94);
-    font-size: 1.6rem;
+    background-color:white;
+    font-size: 2.4rem;
     padding: 0;
     margin: 0;
-    color: white;
+    color:black;
 }
 
 header {
-    background-color: rgb(19, 145, 86); 
-    color: white;
+    background-color: #ee2; 
+    color: black;
     width: 100%;
-    height: 10rem;
+    height: 260px;
     text-align: center;
     display: flex;
     align-items: center;
+    border-radius: 0 0 20px 20px;
 }
 header h1{
     margin: 0px;
@@ -28,9 +33,57 @@ header h1{
     width: 100%;
 }
 
-ol li a {
-    text-decoration: none;
-    color: white;
-    margin: 2rem;
-    line-height: 3rem;
+main {
+    width: 90%;
+    margin: 0 auto; 
+    margin-top: 20px;
 }
+
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width:270px;
+    height:270px;
+    margin-top: 25px;
+    border: solid black 2px;
+    
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+   
+}
+
+.card a {
+    width: 100%;
+    height: 100px;
+}
+
+.description {
+    text-align: center;
+    width: 100%;
+  
+}
+
+footer {
+    width: 100%;
+    height: 220px;
+    background-color: #ee2;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-logo {
+    width: 50px;
+    margin-right: 20px;
+}
+
+ 

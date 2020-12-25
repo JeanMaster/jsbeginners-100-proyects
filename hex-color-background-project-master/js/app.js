@@ -1,21 +1,19 @@
-//declarando los elementos 
-const button = document.getElementById("btn");
-const body = document.querySelector("body");
-const hexprint = document.getElementById("hex-value");
-//event listener
-button.addEventListener("click", changeBackground);
-//array de los valores para estructurar el hexadecimal
-let hexValues = [ 0,1,2,3,4,5,6,7,8,9,"a","b","c","d","e","f"];
+(function() {
+    const button = document.querySelector('#btn')
+    const body = document.querySelector('body')
+    const hexValues = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
+    const value = document.querySelector('#hex-value')
 
-//funcion que hace la magia y se llama al hacer click
-function changeBackground() {
-    let hexchange = "#" //declaramos el hex con el valor unico que no cambia el #
-    for (let i=0; i <=5; i++) {  //este for lo que haces estructurar un hexadecimal random
-        random = Math.floor(Math.random() * hexValues.length)
-        hexchange = hexchange + hexValues[random]
+    button.addEventListener('click', changeHex)
+
+    function changeHex(){
+        let hex = '#'
+
+        for (let i = 0; i < 6; i++){
+            const index = Math.floor(Math.random()*hexValues.length)
+            hex += hexValues[index]
+        }
+        value.textContent = hex
+        body.style.backgroundColor = hex
     }
-    hexprint.innerHTML = hexchange  //imprime el valor del hexadecimal 
-    body.style.backgroundColor = String(hexchange); //cambia el bakcground de la pagina por el valor hexaecimal.
-                                    //puede que el string no sea necesario pero no em funciono sin el.
-}
-
+} )()
